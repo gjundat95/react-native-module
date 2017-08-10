@@ -1,4 +1,4 @@
-package com.mywallpaper;
+package com.mywallpaper.modules;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
@@ -20,6 +20,7 @@ public class ModuleReactPackage implements ReactPackage {
         List<NativeModule> modules = new ArrayList<>();
 
         modules.add(new ToastAndroid(reactContext));
+        modules.add(new WallpaperAndroid(reactContext));
 
         return modules;
     }
@@ -28,6 +29,7 @@ public class ModuleReactPackage implements ReactPackage {
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
+
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {

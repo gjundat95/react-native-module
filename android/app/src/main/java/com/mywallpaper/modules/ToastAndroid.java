@@ -1,4 +1,4 @@
-package com.mywallpaper;
+package com.mywallpaper.modules;
 
 import android.widget.Toast;
 
@@ -25,7 +25,7 @@ public class ToastAndroid extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "ToastModule";
+        return "Toast";
     }
 
     @Nullable
@@ -38,6 +38,6 @@ public class ToastAndroid extends ReactContextBaseJavaModule {
     }
 
     public void show(String message, int duration) {
-        Toast.makeText(getReactApplicationContext(), message, duration).show();
+        Toast.makeText(getReactApplicationContext(), message + "show", duration).show();
     }
 }
